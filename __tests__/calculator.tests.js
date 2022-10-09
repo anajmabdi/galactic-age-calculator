@@ -58,6 +58,31 @@ describe('Calculator', () => {
     expect(calculator2.humanLifeSpan).toEqual(73);
     expect(calculator2.yearsLeftInVenus).toEqual(0);
   });
+
+  test('should convert earth age to Mars age', () => {
+    let calculator = new Calculator(22);
+    calculator.convertToMars();
+    expect(Math.floor((calculator.earthAge * 365) / 687)).toEqual(11);
+    expect(calculator.marsAge).toEqual(11);
+  });
+
+  test('should calculate the remainder of their life on Mars', () => {
+    let calculator = new Calculator(22);
+    let calculator2 = new Calculator(100);
+
+    calculator.convertToMars();
+    calculator.remainderMars();
+    calculator2.convertToMars();
+    calculator2.remainderMars();
+
+    expect(calculator.marsAge).toEqual(11)
+    expect(calculator.humanLifeSpan).toEqual(73);
+    expect(calculator.yearsLeftInMars).toEqual(61);
+
+    expect(calculator2.marsAge).toEqual(162)
+    expect(calculator2.humanLifeSpan).toEqual(73);
+    expect(calculator2.yearsLeftInMars).toEqual(0);
+  });
 });
 
 

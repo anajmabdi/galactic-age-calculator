@@ -38,21 +38,21 @@ export class Calculator {
     }
   }
 
-  // convertToMars() {
+  convertToMars() {
 
-  // }
+  }
 
-  // remainderMars() {
+  remainderMars() {
 
-  // }
+  }
 
-  // convertToJupiter() {
+  convertToJupiter() {
 
-  // }
+  }
 
-  // remainderJupiter() {
+  remainderJupiter() {
 
-  // }
+  }
 
 
 
