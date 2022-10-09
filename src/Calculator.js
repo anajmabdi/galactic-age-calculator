@@ -30,15 +30,13 @@ export class Calculator {
       let conversion = Math.floor((age * 365) / 225);
       this.venusAge = conversion + this.venusAge;
   }
-
-
-
-
-
-
-  // remainderVenus() {
-
-  // }
+  remainderVenus() {
+    if (this.venusAge < this.humanLifeSpan) {
+      this.yearsLeftInVenus = this.humanLifeSpan - this.venusAge;
+    }else {
+      return 0;
+    }
+  }
 
   // convertToMars() {
 
