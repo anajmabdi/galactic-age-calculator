@@ -39,7 +39,7 @@ describe('Calculator', () => {
     let calculator = new Calculator(22);
     calculator.convertToVenus();
     expect(Math.floor((calculator.earthAge * 365) / 225)).toEqual(35);
-    expect(calculator.venusAge).toEqual(36);
+    expect(calculator.venusAge).toEqual(35);
   });
 
 });
