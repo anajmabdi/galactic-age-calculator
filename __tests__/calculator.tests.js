@@ -83,6 +83,24 @@ describe('Calculator', () => {
     expect(calculator2.humanLifeSpan).toEqual(73);
     expect(calculator2.yearsLeftInMars).toEqual(0);
   });
+
+  test('should convert earth age to Jupiter age', () => {
+    let calculator = new Calculator(22);
+    calculator.convertToJupiter();
+    expect(Math.floor((calculator.earthAge * 365) / 4333)).toEqual(1);
+    expect(calculator.jupiterAge).toEqual(1);
+  });
+
+  test('should calculate the remainder of their life on Jupiter', () => {
+    let calculator = new Calculator(22);
+
+    calculator.convertToJupiter();
+    calculator.remainderJupiter();
+
+    expect(calculator.jupiterAge).toEqual(2)
+    expect(calculator.humanLifeSpan).toEqual(73);
+    expect(calculator.yearsLeftInJupiter).toEqual(71);
+  });
 });
 
 
