@@ -41,7 +41,23 @@ describe('Calculator', () => {
     expect(Math.floor((calculator.earthAge * 365) / 225)).toEqual(35);
     expect(calculator.venusAge).toEqual(35);
   });
+  test('should calculate the remainder of their life on Venus', () => {
+    let calculator = new Calculator(22);
+    let calculator2 = new Calculator(100);
 
+    calculator.convertToVenus();
+    calculator.remainderVenus();
+    calculator2.convertToVenus();
+    calculator2.remainderVenus();
+
+    expect(calculator.venusAge).toEqual(35)
+    expect(calculator.humanLifeSpan).toEqual(73);
+    expect(calculator.yearsLeftInVenus).toEqual(38);
+
+    expect(calculator2.venusAge).toEqual(162)
+    expect(calculator2.humanLifeSpan).toEqual(73);
+    expect(calculator2.yearsLeftInVenus).toEqual(0);
+  });
 });
 
 
