@@ -9,6 +9,8 @@ export default class Calculator {
   }
 
   convertToMercury() {
-
+    let age = this.earthAge;
+      let conversion = Math.floor((age * 365) / 88);
+      this.mercuryAge = conversion + this.mercuryAge;
   }
 }
