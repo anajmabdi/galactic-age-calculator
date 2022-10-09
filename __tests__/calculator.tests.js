@@ -1,5 +1,4 @@
 import { Calculator } from '../src/Calculator.js';
-import { yearsLeft } from '../src/Calculator.js';
 
 describe('Calculator', () => {
   test('should build a Calculator object that contains a set of properties', () => {
@@ -18,7 +17,7 @@ describe('Calculator', () => {
     expect(Math.floor((calculator.earthAge * 365) / 88)).toEqual(91);
     expect(calculator.mercuryAge).toEqual(91);
   });
-  
+
   test('should calculate the remainder of their life on Mercury', () => {
     let calculator = new Calculator(22);
     let calculator2 = new Calculator(1);
@@ -36,6 +35,13 @@ describe('Calculator', () => {
     expect(calculator2.humanLifeSpan).toEqual(73);
     expect(calculator2.yearsLeftInMercury).toEqual(69);
   });
+  test('should convert earth age to Venus age', () => {
+    let calculator = new Calculator(22);
+    calculator.convertToVenus();
+    expect(Math.floor((calculator.earthAge * 365) / 225)).toEqual(35);
+    expect(calculator.venusAge).toEqual(36);
+  });
+
 });
 
 
