@@ -39,11 +39,17 @@ export class Calculator {
   }
 
   convertToMars() {
-
+    let age = this.earthAge;
+    let conversion = Math.floor((age * 365) / 687);
+    this.marsAge = conversion + this.marsAge;
   }
 
   remainderMars() {
-
+    if (this.marsAge < this.humanLifeSpan) {
+      this.yearsLeftInMars = this.humanLifeSpan - this.marsAge;
+    }else {
+      return 0;
+    }
   }
 
   convertToJupiter() {

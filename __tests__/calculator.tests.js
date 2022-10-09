@@ -68,7 +68,7 @@ describe('Calculator', () => {
 
   test('should calculate the remainder of their life on Mars', () => {
     let calculator = new Calculator(22);
-    let calculator2 = new Calculator(100);
+    let calculator2 = new Calculator(150);
 
     calculator.convertToMars();
     calculator.remainderMars();
@@ -77,9 +77,9 @@ describe('Calculator', () => {
 
     expect(calculator.marsAge).toEqual(11)
     expect(calculator.humanLifeSpan).toEqual(73);
-    expect(calculator.yearsLeftInMars).toEqual(61);
+    expect(calculator.yearsLeftInMars).toEqual(62);
 
-    expect(calculator2.marsAge).toEqual(162)
+    expect(calculator2.marsAge).toEqual(79)
     expect(calculator2.humanLifeSpan).toEqual(73);
     expect(calculator2.yearsLeftInMars).toEqual(0);
   });
