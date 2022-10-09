@@ -21,14 +21,14 @@ In order to determine that I took into account how many Earth days are in a year
 
 <p>&nbsp;</p>
 
-## **One way to calculate how old you are:**
+### **One way to calculate how old you are:**
 <p>&nbsp;</p>
 
 Multiply your age by 365, then divide the total by the number of the planet's days. 
 ### **Ex**: Mercury: 22(365) = 8,030 earth days <br> 8,030/88 = 91 Mercury years
 <p>&nbsp;</p> 
 
-## **OR**
+### **OR**
  <p>&nbsp;</p>
 
 Divide earth age by Earth year for each planet
