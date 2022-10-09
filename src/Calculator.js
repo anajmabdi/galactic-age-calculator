@@ -17,7 +17,6 @@ export class Calculator {
       let conversion = Math.floor((age * 365) / 88);
       this.mercuryAge = conversion + this.mercuryAge;
   }
-
   remainderMercury() {
     if (this.mercuryAge < this.humanLifeSpan) {
       this.yearsLeftInMercury = this.humanLifeSpan - this.mercuryAge;
@@ -25,6 +24,7 @@ export class Calculator {
       return 0;
     }
   }
+
   convertToVenus() {
     let age = this.earthAge;
       let conversion = Math.floor((age * 365) / 225);
@@ -43,7 +43,6 @@ export class Calculator {
     let conversion = Math.floor((age * 365) / 687);
     this.marsAge = conversion + this.marsAge;
   }
-
   remainderMars() {
     if (this.marsAge < this.humanLifeSpan) {
       this.yearsLeftInMars = this.humanLifeSpan - this.marsAge;
@@ -53,11 +52,17 @@ export class Calculator {
   }
 
   convertToJupiter() {
-
+    let age = this.earthAge;
+    let conversion = Math.floor((age * 365) / 4333);
+    this.jupiterAge = conversion + this.jupiterAge;
   }
 
   remainderJupiter() {
-
+    if (this.jupiterAge < this.humanLifeSpan) {
+      this.yearsLeftInJupiter = this.humanLifeSpan - this.jupiterAge;
+    }else {
+      return 0;
+    }
   }
 
 

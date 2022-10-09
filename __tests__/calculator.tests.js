@@ -97,9 +97,9 @@ describe('Calculator', () => {
     calculator.convertToJupiter();
     calculator.remainderJupiter();
 
-    expect(calculator.jupiterAge).toEqual(2)
+    expect(calculator.jupiterAge).toEqual(1)
     expect(calculator.humanLifeSpan).toEqual(73);
-    expect(calculator.yearsLeftInJupiter).toEqual(71);
+    expect(calculator.yearsLeftInJupiter).toEqual(72);
   });
 });
 
